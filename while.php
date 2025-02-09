@@ -7,14 +7,14 @@
 </head>
 <form action="while.php" method="post">
     <!-- <input type="text" name="number" placeholder="Enter a number"> -->
-    <input type="submit">
+    <input type="submit" name="stop" value="stop">
 </form>
 <body>
     
 </body>
 </html>
 <?php
-
+    
     // $number = $_POST["number"];
     // $counter = 0;
     // while($counter <$number){
@@ -23,10 +23,13 @@
     // }
 
     $running =true;
+    $counter = 0;
     while($running){
-        if(isset($_POST)){
-            
+        if(isset($_POST["stop"])){ // if stop clicked
+            $running = false;
         }
+        $counter++;
+        echo $counter."<br>";
     }
 
 ?>
