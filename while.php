@@ -28,8 +28,11 @@
         if(isset($_POST["stop"])){ // if stop clicked
             $running = false;
         }
-        $counter++;
-        echo $counter."<br>";
+        else{
+
+            $counter++;
+            echo $counter."<br>";
+        }
     }
 
 ?>
